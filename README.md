@@ -2,7 +2,7 @@
 instructions to run the MoviesProject:
 1)to download MoviesProject run thi bash in your terminal/powershell:
     git clone https://github.com/faroukshtewee/Web-Development-Basic/tree/DevOpsCourse
-2) in powershell go to where you downloaded the project and CD    to /WebDevelopment/MoviesProject/MoviesProject
+2) in powershell go to where you downloaded the project and CD    to /WebDevelopment/MoviesProject
 
 
 3)  run this bash in  your  terminal/powershell:
