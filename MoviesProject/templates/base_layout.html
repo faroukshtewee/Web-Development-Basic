@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movies Blog</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body >
+
+    <div class="wrapper" >
+        <nav>
+	    <ul>
+			{% if user.is_authenticated %}
+	        <li>
+	            <form class="logout-link" action="{% url 'accounts:logout' %}" method="post">
+	                {% csrf_token %}
+	                <button type="submit">Logout</button>
+	            </form>
+	        </li>
+			{% else %}
+			<li>
+	            <form class="login-link" action="{% url 'accounts:login' %}" method="post">
+	                {% csrf_token %}
+	                <button type="submit">Login</button>
+	            </form>
+	        </li>
+			<li>
+	            <form class="login-link" action="{% url 'accounts:signup' %}" method="post">
+	                {% csrf_token %}
+	                <button type="submit">Signup</button>
+	            </form>
+	        </li>
+			{% endif %}
+			<li>
+	            <form class="home-link" action="{% url 'home' %}" method="post">
+	                {% csrf_token %}
+	                <button type="submit">Home</button>
+	            </form>
+	        </li>
+			{% if user.is_superuser %}
+			<li>
+	            <form class="addmovie-link" action="{% url 'movies:createMovie' %}" method="post">
+	                {% csrf_token %}
+	                <button type="submit">Add Movie (Admin)</button>
+	            </form>
+
+	        </li>
+			{% endif %}
+
+	    </ul>
+	</nav>
+        {% block content%}
+        {% endblock %}
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
