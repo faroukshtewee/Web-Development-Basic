@@ -4,6 +4,8 @@ FROM python:3.9.2
 # Set the working directory inside the container
 WORKDIR /app
 
+RUN apt-get update
+RUN apt-get install gcc default-libmysqlclient-dev -y
 # Copy the requirements file into the container
 COPY requirement.txt .
 
