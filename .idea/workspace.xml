@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fdc9d885-10b9-4e61-8147-fbbffc7566ff" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/init/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/init/data.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/init/import_data.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MoviesProject/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MoviesProject/MoviesProject/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesProject/MoviesProject/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MoviesProject/db65413.sqlite3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MoviesProject/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MoviesProject/start_django.sh" beforeDir="false" afterPath="$PROJECT_DIR$/MoviesProject/start_django.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
