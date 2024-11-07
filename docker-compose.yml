@@ -20,11 +20,24 @@ services:
       interval: 5s
       timeout: 20s
       retries: 30
+  init:
+      container_name: mysql-init
+      build:
+        context: ./init
+      volumes:
+        - /tmp/shared:/usr/lib/shared
+      env_file:
+        - .env
+      environment:
+        - SQL_ROOT_PASSWORD=${SQL_ROOT_PASSWORD}
 
+      depends_on:
+        db:
+          condition: service_healthy
   djangoproj:
     container_name: django-container
     build: 
-      context: .
+      context: ./MoviesProject
     restart: always
     env_file:
       - .env
